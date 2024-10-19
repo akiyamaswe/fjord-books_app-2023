@@ -85,6 +85,7 @@ ja:
   errors:
     format: "%{attribute}%{message}"
     messages:
+      invalid_file_type: をjpg, gif, pngのいずれかの形式でアップロードしてください
       accepted: を受諾してください
       blank: を入力してください
       confirmation: と%{attribute}の入力が一致しません
