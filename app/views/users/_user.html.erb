@@ -11,6 +11,11 @@
   </p>
 
   <p>
+    <strong><%= User.human_attribute_name(:avatar) %>:</strong>
+    <%= user.avatar.present? ? image_tag(user.avatar.variant(resize: "300x300")) : image_tag("no-image.png") %>
+  </p>
+
+  <p>
     <strong><%= User.human_attribute_name(:postal_code) %>:</strong>
     <%= user.postal_code %>
   </p>
