@@ -1,0 +1,8 @@
+<div>
+<strong><%= Comment.human_attribute_name(:content) %>:</strong>
+</div>
+
+<%= form_with model: [commentable, comment] do |f| %>
+  <%= f.text_area :content %>
+  <%= f.submit t('comments.form.create') %>
+<% end %>
