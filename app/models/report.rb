@@ -19,10 +19,10 @@ class Report < ApplicationRecord
     created_at.to_date
   end
 
-  REPORT_ID_URL = %r{http://localhost:3000/reports/(\d+)}
+  REPORT_ID_REGEX = %r{http://localhost:3000/reports/(\d+)}
 
   def create_mentions
-    extracted_ids = content.scan(REPORT_ID_URL).flatten.uniq.map(&:to_i)
+    extracted_ids = content.scan(REPORT_ID_REGEX).flatten.uniq.map(&:to_i)
     Mention.where(mentioning_report_id: id).destroy_all
 
     extracted_ids.all? do |extracted_id|

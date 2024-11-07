@@ -204,7 +204,7 @@ ja:
       truncate: '…'
     mention:
       mentioned: "この%{name}は以下の%{name}からリンクされています。"
-      failure: "メンションを保存出来ませんでした。存在していないレポートをメンションしている可能性があります。"
+      failure: "メンションを保存出来ませんでした。言及できないレポートをメンションしている可能性があります。"
   controllers:
     common:
       notice_create: "%{name}が作成されました。"
