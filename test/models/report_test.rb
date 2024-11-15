@@ -14,4 +14,9 @@ class ReportTest < ActiveSupport::TestCase
     assert alice_report.editable?(alice)
     assert_not alice_report.editable?(bob)
   end
+
+  test 'should return date without time' do
+    report = Report.new(created_at: Time.zone.local(2024, 11, 15, 15, 30))
+    assert_equal Date.new(2024, 11, 15), report.created_on
+  end
 end

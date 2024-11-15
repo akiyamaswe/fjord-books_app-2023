@@ -10,17 +10,21 @@ class ReportsTest < ApplicationSystemTestCase
     fill_in 'Eメール', with: 'alice@example.com'
     fill_in 'パスワード', with: 'password'
     click_on 'ログイン'
-    assert_text 'ログインしました。'
+    click_on '日報'
   end
 
   test 'visiting the index' do
     visit reports_url
     assert_selector 'h1', text: '日報の一覧'
+    assert_text '今日の天気'
+    assert_text '本日も晴天なり。'
   end
 
   test 'visiting the report' do
     visit report_url(@report)
     assert_selector 'h1', text: '日報の詳細'
+    assert_text '今日の天気'
+    assert_text '本日も晴天なり。'
   end
 
   test 'creating a report' do
