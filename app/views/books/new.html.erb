@@ -1,9 +1,9 @@
-<h1><%= t('books.new.header') %></h1>
+<h1><%= t('controllers.new.header', model: Book.model_name.human) %></h1>
 
 <%= render "form", book: @book %>
 
 <br>
 
 <nav class="page-nav">
-  <%= link_to t('books.new.back'), books_path %>
+  <%= link_to t('controllers.new.back', model: Book.model_name.human), books_path %>
 </nav>
