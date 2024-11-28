@@ -13,4 +13,8 @@
   <body class="<%= params[:action] %>">
     <%= yield %>
   </body>
+  <div>
+  </br>
+  <%= button_to t('users.shared.links.sign_out'), destroy_user_session_path, method: :delete %>
+  </div>
 </html>

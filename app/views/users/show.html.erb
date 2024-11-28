@@ -23,10 +23,9 @@
 </div>
 
 <nav class="page-nav">
-<% if current_user.id == @user.id %>
-  <%= link_to t('views.common.edit', name: User.model_name.human.downcase), edit_user_registration_path %></br>
-<% end %>
+  <% if current_user.id == @user.id %>
+    <%= link_to t('views.common.edit', name: User.model_name.human.downcase), edit_user_registration_path %></br>
+  <% end %>
   <%= link_to t('views.common.back', name: i18n_pluralize(User.model_name.human.downcase)), users_path %>
   <%= link_to t('views.common.back', name: i18n_pluralize(Book.model_name.human.downcase)), books_path %>
-  <%= button_to t('users.shared.links.sign_out'), destroy_user_session_path, method: :delete %>
 </nav>
