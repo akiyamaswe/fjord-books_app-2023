@@ -1,0 +1,39 @@
+ja:
+  app:
+    title: "本アプリ"
+  controllers:
+    index:
+      header: "登録した%{model}の一覧"
+      show: "この%{model}を表示する"
+      new: "新しい%{model}を作成する"
+    new:
+      header: "新しい%{model}を作成する"
+      back: "%{model}の一覧に戻る"
+    show:
+      destroy: "この%{model}を削除"
+      edit: "この%{model}を編集する"
+      back: "%{model}の一覧に戻る"
+    edit:
+      header: "%{model}を編集する"
+      show: "この%{model}を表示する"
+      back: "%{model}の一覧に戻る"
+    notices:
+      created: "%{model}を作成しました。"
+      updated: "%{model}を更新しました。"
+      destroyed: "%{model}を削除しました。"
+    form:
+      create_button: "%{model}を作成する"
+      update_button: "%{model}を更新する"
+  errors:
+    error: "エラー"
+  form:
+    error_message: "のエラーにより保存できませんでした："
+  activerecord:
+    models:
+      book: "本"
+    attributes:
+      book:
+        title: "タイトル"
+        memo: "メモ"
+        author: "著者"
+        picture: "画像"
